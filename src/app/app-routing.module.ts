@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule, PreloadAllModules } from '@angular/router';
 import { AppComponent } from './app.component';
-import { HomeComponent } from './home/component/home/home.component';
+import { HomeComponent } from './home/home.component';
 import { WishlistModule } from './wishlist/modules/wishlist.module';
 
 
