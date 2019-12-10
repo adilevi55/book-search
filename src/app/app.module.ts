@@ -3,14 +3,21 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-
+import { ShearchModule } from './shearch/module/shearch.module';
+import { HomeComponent } from './home/component/home/home.component';
+import { FormsModule } from '@angular/forms';
+import { WishlistModule } from './wishlist/modules/wishlist.module';
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HomeComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ShearchModule,
+    FormsModule,
+    WishlistModule
   ],
   providers: [],
   bootstrap: [AppComponent]
