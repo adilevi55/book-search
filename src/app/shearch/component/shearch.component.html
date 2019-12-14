@@ -1,0 +1,24 @@
+<div class="header-div">
+    <div class="h1-wishlist-div">
+        <h1>Welcome {{userName}}</h1>
+        <button button mat-raised-button [disabled]="wishlistService.books.length === 0"
+            routerLink="/wishlist/{{userName}}">
+            Wishlist
+        </button>
+    </div>
+
+    <mat-form-field>
+
+        <input matInput id="search-box" placeholder="Enter Book's Name" (input)='search($event.target.value)'
+            type="text">
+    </mat-form-field>
+</div>
+
+<div class="books-container" fxLayout="row wrap" fxLayoutGap="2%" fxLayoutAlign="center center">
+    <ng-container *ngFor="let book of books">
+        <app-book fxFlex="100%" fxFlex.gt-xs="0 1 calc(33.3% - 32px)" fxFlex.gt-sm="0 1 calc(33.3% - 32px)"
+            fxFlex.xl="0 1 calc(25% - 32px)" [book]="book">
+        </app-book>
+    </ng-container>
+
+</div>

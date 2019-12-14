@@ -1,11 +1,15 @@
 <form #formInfo="ngForm"> 
-    <input type="text" 
-     #userNameInfo="ngModel" [(ngModel)]="userName" name="userName"
-      placeholder="User Name" required>
-    <div *ngIf="userNameInfo.errors?.required && userNameInfo.touched">
-        <p>Missing User Name</p>
-    </div>
-    <button [disabled]="formInfo.form.invalid"
+    <mat-form-field >
+        <input matInput type="text"  #userNameInfo="ngModel"
+         [(ngModel)]="userName" name="userName" required
+      placeholder="User Name" >
+ 
+    <mat-error  *ngIf="userNameInfo.errors?.required && userNameInfo.touched">
+        User Name is <strong> required </strong>
+    </mat-error >
+  </mat-form-field>
+    <button mat-raised-button
+    (click)="userSingIn()" [disabled]="formInfo.form.invalid"
     routerLink="/search/{{userName}}"
     >LogIn </button>
   </form>

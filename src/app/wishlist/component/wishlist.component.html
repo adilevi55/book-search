@@ -1,1 +1,16 @@
-<p>wishlist works!</p>
+<div class="h1-button-div">
+    <h1>Wishllist</h1>
+    <button mat-flat-button routerLink="/search/{{userName}}">Search Book</button>
+</div>
+
+<div class="books-container" fxLayout="row wrap" fxLayoutGap="2%" fxLayoutAlign="center center">
+    <ng-container *ngFor="let b of wishlistService.books">
+
+        <app-book [book]="b" [isWishlistPage]="true" [userName]="userName" fxFlex="100%"
+            fxFlex.gt-xs="0 1 calc(33.3% - 32px)" fxFlex.gt-sm="0 1 calc(33.3% - 32px)"
+            fxFlex.xl="0 1 calc(25% - 32px)">
+
+        </app-book>
+
+    </ng-container>
+</div>

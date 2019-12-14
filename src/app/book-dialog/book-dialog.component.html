@@ -1,0 +1,13 @@
+<div>
+        <button mat-icon-button color="warn" *ngIf="wishlistService.checkBookInWishlist(data.book)"
+                (click)="removeBookToWishlist()">
+                <mat-icon>star</mat-icon>
+        </button>
+        <button mat-icon-button *ngIf="!wishlistService.checkBookInWishlist(data.book)" (click)="addBookToWishlist()">
+                <mat-icon>star</mat-icon>
+        </button>
+
+        <h1>{{data.book.volumeInfo.title}}</h1>
+        <p>{{data.book.volumeInfo.authors}}</p>
+        <p [innerHTML]="data.book.searchInfo.textSnippet"></p>
+</div>

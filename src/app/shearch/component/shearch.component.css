@@ -1,0 +1,16 @@
+.books-container{
+    background-image: url(../../../assets/imges/books-1163695_1280.jpg);
+    background-size: cover;
+    background-repeat: space;
+}
+.header-div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #CAAF98;
+
+}
+.h1-wishlist-div{
+    display: flex;
+    justify-content: space-around;
+}

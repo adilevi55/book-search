@@ -1,0 +1,10 @@
+<div (click)="openDialog()">
+    <p>{{book.volumeInfo.title}}</p>
+    <img *ngIf="book.volumeInfo.imageLinks; else imgNotFound " src="{{book.volumeInfo.imageLinks.thumbnail}}"
+        width="80%">
+
+    <ng-template #imgNotFound>
+        <img src='https://cdn.browshot.com/static/images/not-found.png' width="80%">
+    </ng-template>
+
+</div>
