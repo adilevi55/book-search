@@ -3,14 +3,29 @@
     background-size: cover;
     background-repeat: space;
 }
-.header-div{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    background-color: #CAAF98;
-
+h1{
+    border-radius: 4px;
+    background-color: #ffffff;
+    color: black;   
+    padding: 20px;
+    display: block;
+    width: 80%;
+    margin-left: 10%;
+    text-align: center;
 }
-.h1-wishlist-div{
-    display: flex;
-    justify-content: space-around;
+button{
+    border-radius: 4px;
+    background-color: #ffffff;
+    color: black;   
+    padding: 20px;
+    width: 30%;
+    margin-left: 10%;
+    text-align: center;
+}
+mat-form-field{
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 4px;
+    color: black;
+    margin-bottom: 15px
 }
